@@ -1,0 +1,24 @@
+{
+  "name": "Calculator",
+  "short_name": "Calculator",
+  "description": "A simple calculator",
+  "start_url": "./",
+  "display": "standalone",
+  "display_override": ["window-controls-overlay"],
+  "icons": [
+    {
+      "src": "icon-144.svg",
+      "sizes": "144x144"
+    },
+    {
+      "src": "icon-192-maskable.png",
+      "sizes": "192x192",
+      "purpose": "maskable"
+    },
+    {
+      "src": "icon-1024-maskable.svg",
+      "sizes": "1024x1024",
+      "purpose": "maskable"
+    }
+  ]
+}
