@@ -125,9 +125,15 @@ function sign() {
 //  Calculates percentage
 //
 function percentage() {
+  shouldAppend = false
 
+  if (!queuedOperand) queuedOperand = lastOperand
+
+  applyOperation = () => {
+    lastOpElement.innerText = `${ queuedOperand }%`
+    queuedOperand *= 0.01
+  }
 }
-
 
 //
 //  Clear
