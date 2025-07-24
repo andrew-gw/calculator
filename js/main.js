@@ -72,9 +72,34 @@ function output(digit) {
 //  @param digit Number
 //
 function point(digit) {
+  if (document.querySelector('[value=AC]')) {
+    document.querySelector('[value=AC]').value = 'C'
+  }
 
+  if (!shouldAppend) {
+    document.querySelector('#display').innerText = `0.`
+    lastOperand = '0.'
+
+    containsDecimal = true
+    shouldAppend = true
+
+    resizeDisplayString()
+
+    return
+  }
+
+  if (containsDecimal) {
+    return
+  }
+
+  containsDecimal = true
+
+  document.querySelector('#display').innerText += `.`
+
+  lastOperand += '.'
+
+  resizeDisplayString()
 }
-
 
 //
 //  Sign
