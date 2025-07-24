@@ -19,7 +19,7 @@ A simple calculator
 
 ## Getting Started
 
-1. Download or Clone the project:
+1. Download or `clone` the project:
 
    `git clone https://github.com/andrew-gw/calculator.git`
 
