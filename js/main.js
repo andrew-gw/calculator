@@ -1,4 +1,23 @@
 //
+//  Calculator Main Functions
+//
+//  The main functions of the calculator
+//
+
+const lastOpElement = document.querySelector('#lastOp')
+
+let lastOperand = 0
+
+let shouldAppend = false
+let containsDecimal = false
+let startingZero = true
+
+let isSumming = false
+let applyOperation = () => {}
+let queuedOperand = 0
+
+
+//
 //  Output Digit
 //
 //  Outputs a digit
@@ -6,9 +25,44 @@
 //  @param digit Number
 //
 function output(digit) {
+  if (!shouldAppend && digit == 0) {
+    startingZero = true
+  }
 
+  if (shouldAppend) {
+    if (!isSumming) {
+      lastOperand += digit
+    }
+
+    if (!containsDecimal) {
+      document.querySelector('#display').innerText = addThousandsSeparators(lastOperand)
+    } else {
+      document.querySelector('#display').innerText += digit
+    }
+  } else {
+    if (!isSumming) {
+      lastOperand = digit
+    }
+
+    document.querySelector('#display').innerText = `${ digit }`
+
+    containsDecimal = false
+
+    if (digit == 0 && startingZero) {
+      shouldAppend = false
+    } else {
+      shouldAppend = true
+    }
+  }
+
+  if (shouldAppend) {
+    if (document.querySelector('[value=AC]')) {
+      document.querySelector('[value=AC]').value = 'C'
+    }
+  }
+
+  resizeDisplayString()
 }
-
 
 //
 //  Append Point
