@@ -102,5 +102,22 @@ function percentage() {
 //  Clears memory
 //
 function clear() {
+  lastOperand = 0
+  queuedOperand = 0
+  shouldAppend = false
+  containsDecimal = false
+  startingZero = true
+  isSumming = false
 
+  applyOperation = () => {}
+
+  document.querySelector('#display').innerText = `0`
+
+  if (document.querySelector('[value=C]')) {
+    document.querySelector('[value=C]').value = 'AC'
+  }
+
+  lastOpElement.innerText = ``
+
+  resizeDisplayString()
 }
