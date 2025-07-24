@@ -74,5 +74,14 @@ function divide() {
 //  Calculates Sum
 //
 function sum() {
+  shouldAppend = false
 
+  applyOperation()
+
+  isSumming = true
+
+  output(addThousandsSeparators(queuedOperand))
+
+  isSumming = false
+  shouldAppend = false
 }
