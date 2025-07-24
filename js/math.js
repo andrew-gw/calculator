@@ -42,9 +42,15 @@ function subtract() {
 //  Multiplies operand
 //
 function multiply() {
+  shouldAppend = false
 
+  if (!queuedOperand) queuedOperand = lastOperand
+
+  applyOperation = () => {
+    lastOpElement.innerText = `${ addThousandsSeparators(queuedOperand) } × ${ addThousandsSeparators(lastOperand) }`
+    queuedOperand *= lastOperand
+  }
 }
-
 
 //
 //  Divide
