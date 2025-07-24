@@ -10,9 +10,15 @@
 //  Adds operand
 //
 function add() {
+  shouldAppend = false
 
+  if (!queuedOperand) queuedOperand = parseFloat(lastOperand)
+
+  applyOperation = () => {
+    lastOpElement.innerText = `${ addThousandsSeparators(queuedOperand) } + ${ addThousandsSeparators(lastOperand) }`
+    queuedOperand += parseFloat(lastOperand)
+  }
 }
-
 
 //
 //  Subtract
