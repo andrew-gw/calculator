@@ -58,9 +58,15 @@ function multiply() {
 //  Divides operand
 //
 function divide() {
+  shouldAppend = false
 
+  if (!queuedOperand) queuedOperand = lastOperand
+
+  applyOperation = () => {
+    lastOpElement.innerText = `${ addThousandsSeparators(queuedOperand) } ÷ ${ addThousandsSeparators(lastOperand) }`
+    queuedOperand /= lastOperand
+  }
 }
-
 
 //
 //  Sum
