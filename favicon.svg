@@ -1,0 +1,21 @@
+<svg viewBox="0 0 16 16" xmlns="http://www.w3.org/2000/svg">
+  <rect fill="#000000" x="3" y="1" width="10" height="14" rx="1.5"></rect>
+  <g fill="#FFFFFF">
+    <circle cx="11" cy="13" r="1"></circle>
+    <rect x="4" y="12" width="5" height="2" rx="1"></rect>
+    <circle cx="11" cy="10" r="1"></circle>
+    <circle cx="8" cy="10" r="1"></circle>
+    <circle cx="5" cy="10" r="1"></circle>
+    <circle cx="11" cy="7" r="1"></circle>
+    <circle cx="8" cy="7" r="1"></circle>
+    <circle cx="5" cy="7" r="1"></circle>
+    <path d="M4.5,2 L11.5,2 C11.75,2 12,2.25 12,2.5 L12,5 L12,5 L4,5 L4,2.5 C4,2.25 4.25,2 4.5,2 Z"></path>
+  </g>
+  <rect fill="#000000" x="10" y="3" width="1" height="1"></rect>
+
+  <style>
+    @media (prefers-color-scheme: dark) {
+      g, rect:not(g > rect) { filter: invert(1) }
+    }
+  </style>
+</svg>
