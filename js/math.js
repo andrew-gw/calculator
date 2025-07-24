@@ -26,9 +26,15 @@ function add() {
 //  Subtracts operand
 //
 function subtract() {
+  shouldAppend = false
 
+  if (!queuedOperand) queuedOperand = lastOperand
+
+  applyOperation = () => {
+    lastOpElement.innerText = `${ addThousandsSeparators(queuedOperand) } - ${ addThousandsSeparators(lastOperand) }`
+    queuedOperand -= lastOperand
+  }
 }
-
 
 //
 //  Multiply
