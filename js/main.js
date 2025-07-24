@@ -107,9 +107,17 @@ function point(digit) {
 //  Toggles sign +/-
 //
 function sign() {
+  shouldAppend = false
 
+  if (!queuedOperand) queuedOperand = lastOperand
+
+  applyOperation = () => {
+    queuedOperand *= -1
+  }
+
+  applyOperation()
+  output(queuedOperand)
 }
-
 
 //
 //  Percentage
