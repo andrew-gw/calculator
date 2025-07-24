@@ -17,15 +17,6 @@ A simple calculator
 - Works Offline
 
 
-### Technical Features
-
-- Progressive Web App
-- Responsive Design
-- Custom App Icon
-- Single Unified Codebase
-- No Third-Party Frameworks, Libraries, or Packages
-
-
 ## Getting Started
 
 1. Download or Clone the project:
@@ -46,11 +37,6 @@ A simple calculator
 - No Third-Party Frameworks, Libraries, or Packages
 
 
-## Requirements
-
-- JavaScript
-
-
 ## Design Goals
 
 1. User Experience & Accessibility
@@ -64,6 +50,11 @@ A simple calculator
 - HTML via [W3C Markup Validation Service](https://validator.w3.org)
 - CSS via [W3C CSS Validation Service](http://jigsaw.w3.org/css-validator/)
 - [Lighthouse](https://github.com/GoogleChrome/lighthouse)
+
+
+## Requirements
+
+- JavaScript
 
 
 ## License
