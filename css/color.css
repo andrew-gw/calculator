@@ -1,0 +1,23 @@
+body {
+  --bg-color: #E8E8E8;
+  --text-color: black;
+  --grey: white;
+  --accent-color: #008282;
+  --dark-grey: #D4D4D4;
+  --button-active-color: #D9D9D9;
+  --fn-button-active-color: #B3B3B3;
+  --op-button-active-color: #006969;
+}
+
+@media (prefers-color-scheme: dark) {
+  body {
+    --bg-color: black;
+    --text-color: white;
+    --grey: #262626;
+    --accent-color: #006969;
+    --dark-grey: #3D3D3D;
+    --button-active-color: #3D3D3D;
+    --fn-button-active-color: #525252;
+    --op-button-active-color: #008282;
+  }
+}
