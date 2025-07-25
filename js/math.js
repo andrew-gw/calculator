@@ -82,6 +82,12 @@ function sum() {
 
   output(addThousandsSeparators(queuedOperand))
 
+  // Anncounce result to screen readers
+  document.getElementById('display').ariaLive = 'polite'
+  setTimeout(() => {
+    document.getElementById('display').removeAttribute('aria-live')
+  }, 1000)
+
   isSumming = false
   shouldAppend = false
 }
