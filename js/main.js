@@ -57,6 +57,7 @@ function output(digit) {
 
   if (shouldAppend) {
     if (document.querySelector('[value=AC]')) {
+      document.querySelector('[value=AC]').ariaLabel = 'Clear'
       document.querySelector('[value=AC]').value = 'C'
     }
   }
@@ -73,6 +74,7 @@ function output(digit) {
 //
 function point(digit) {
   if (document.querySelector('[value=AC]')) {
+    document.querySelector('[value=AC]').ariaLabel = 'Clear'
     document.querySelector('[value=AC]').value = 'C'
   }
 
@@ -153,6 +155,7 @@ function clear() {
   document.querySelector('#display').innerText = `0`
 
   if (document.querySelector('[value=C]')) {
+    document.querySelector('[value=C]').ariaLabel = 'All clear'
     document.querySelector('[value=C]').value = 'AC'
   }
 
